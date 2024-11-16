@@ -7,26 +7,66 @@ function LoginCadastro() {
   const [senha, setSenha] = useState('');
   const [nome, setNome] = useState('');
   const [isLogin, setIsLogin] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const navigate = useNavigate();
 
+  // Função de login
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Login:', { email, senha });
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    const user = users.find(u => u.email === email && u.senha === senha);
+    
+    if (user) {
+      alert('Login bem-sucedido!');
+      navigate('/'); // Página inicial
+    } else {
+      setErrorMessage('Email ou senha inválidos!');
+    }
+
+    setEmail('');
+    setSenha('');
   };
 
+  // Função de cadastro
   const handleCadastro = (e) => {
     e.preventDefault();
-    console.log('Cadastro:', { nome, email, senha });
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Verificar se o e-mail já está cadastrado
+    const existingUser = users.find(u => u.email === email);
+
+    if (existingUser) {
+      setErrorMessage('Usuário já cadastrado! Faça o login.');
+      return;
+    }
+
+    if (senha.length < 6) {
+      setErrorMessage('A senha deve ter no mínimo 6 caracteres.');
+      return;
+    }
+
+    // Criar um novo usuário
+    const newUser = { nome, email, senha };
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Cadastro realizado com sucesso! Agora faça login.');
+    setNome('');
+    setEmail('');
+    setSenha('');
+    setIsLogin(true); // Redireciona para a tela de login
   };
 
   return (
     <div className="login-cadastro-container">
-
       <div className="form-wrapper">
-      <button onClick={() => navigate(-1)} className="btn-voltar-home">Voltar</button>
-        <br />  <br />
-        <h1>Entrar / Cadastrar</h1>
+        <button onClick={() => navigate(-1)} className="btn-voltar-home">Voltar</button>
+        <h1>{isLogin ? 'Entrar' : 'Cadastrar'}</h1>
+        
         <div className="button-container">
           <button onClick={() => setIsLogin(true)}>Login</button>
           <button onClick={() => setIsLogin(false)}>Cadastrar</button>
@@ -55,6 +95,7 @@ function LoginCadastro() {
                     required
                   />
                 </div>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <button type="submit">Entrar</button>
               </form>
             </div>
@@ -89,6 +130,7 @@ function LoginCadastro() {
                     required
                   />
                 </div>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <button type="submit">Cadastrar</button>
               </form>
             </div>

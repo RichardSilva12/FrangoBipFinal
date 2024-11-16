@@ -1,98 +1,154 @@
+/* Container principal */
 .login-cadastro-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #b10127; /* Fundo vermelho */
 }
 
+/* Caixa do formulário */
 .form-wrapper {
     position: relative;
-    background-color: #fff;
+    background-color: #fff; /* Fundo branco para o formulário */
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
     width: 100%;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Botões de alternância (Login/Cadastro) */
 .button-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .button-container button {
-    background-color: #a8772d;
+    background-color: #DC7B1A; /* Laranja */
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 25px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 0 10px;
 }
 
 .button-container button:hover {
-    background-color: #6f2c91;
+    background-color: #8a021e; /* Vermelho escuro */
 }
 
+/* Formulários de Login e Cadastro */
 .form-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    flex-direction: column; /* Alinha os campos de forma vertical */
+    align-items: center; /* Centraliza os campos */
 }
 
+/* Estilo da seção de Login e Cadastro */
 .login-section, .cadastro-section {
-    width: 50%;
-}
-.cadastro-section {
-    margin-left: auto;
-}
-
-h1, h2 {
-    margin: 10px 0;
+    width: 100%;
+    max-width: 350px; /* Ajusta a largura para evitar que o conteúdo fique esticado */
+    padding: 10px;
+    text-align: left;
+    margin: 0 auto; /* Centraliza as seções */
 }
 
+/* Inputs */
 input {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 12px;
+    margin: 12px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+
+input:focus {
+    border-color: #DC7B1A; /* Laranja */
+    outline: none;
+}
+
+/* Botão de Submit */
 button[type="submit"] {
-    background-color: #512da8;
+    background-color: #DC7B1A; /* Laranja */
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
-    background-color: #6f2c91;
-}  
-
-.cadastro-section {
-    text-align: center;
+    background-color: #8a021e; /* Vermelho escuro */
 }
 
+/* Texto de cabeçalho */
+h1, h2 {
+    margin: 10px 0;
+    color: #2c2c2c; /* Cor mais escura para garantir visibilidade */
+    font-weight: bold;
+    font-size: 1.5rem; /* Ajuste no tamanho da fonte */
+}
+
+/* Botão Voltar */
 .btn-voltar-home {
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: rgb(255, 0, 0);
-    color: black;
-    border-radius: 10px;
-    padding: 10px 20px;
+    background-color: #fff; /* Branco para o botão de voltar */
+    color: #b10127; /* Vermelho para o texto */
+    border-radius: 25px;
+    padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
     border: none;
     cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .btn-voltar-home:hover {
-    background-color: #d1ae00;
-    color: #333;
+    background-color: #f4f7fc; /* Cor suave para o hover */
+}
+
+/* Adicionando um efeito de transição */
+.form-wrapper:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .login-section, .cadastro-section {
+        max-width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

@@ -1,0 +1,74 @@
+.carousel {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+.carousel-image {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+
+/* Botões do carrossel (setas) */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-90%);
+  font-size: 2rem;
+  background-color: rgba(89, 19, 19, 0.5);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.arrow.prev {
+  left: 20px;
+}
+
+.arrow.next {
+  right: 20px;
+}
+
+/* Estilos dos pontos de navegação (bolinhas) */
+.slick-dots {
+  position: absolute;
+  bottom: 15px; /* Alinha as bolinhas dentro da imagem, perto da borda inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre as bolinhas */
+}
+
+.slick-dots li {
+  list-style: none;
+}
+
+.slick-dots li button:before {
+  color: #fff; /* Cor branca para as bolinhas */
+  font-size: 12px; /* Tamanho das bolinhas */
+  opacity: 0.75; /* Transparência das bolinhas */
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1; /* Aumenta a visibilidade da bolinha ativa */
+}
+
+/* Para fazer com que o fundo do carrossel cubra parte do header */
+.carousel:before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}

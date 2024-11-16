@@ -1,0 +1,198 @@
+
+
+/* Ajuste da página de receita */
+.page {
+display: flex;
+flex-direction: column;
+min-height: 50vh;
+}
+
+
+/* Header com espaçamento */
+.empresa-container {
+background-color: #b10127; /* Fundo vermelho */
+color: white; /* Texto branco */
+text-align: center;
+padding: 20px 0; /* Espaçamento de 40px */
+font-size: 24px; /* Texto grande */
+font-weight: bold;
+margin-top: 150px; /* Espaçamento abaixo do header */
+flex-grow: 1; /* Faz o container crescer até o rodapé */
+}
+
+.info-container_tela {
+background-color: #DC7B1A; /* Fundo vermelho */
+text-align: center;
+padding: 100px 0; /* Espaçamento de 40px */
+font-weight: bold;
+margin-top: 600px; /* Espaçamento abaixo do header */
+flex-grow: 1; /* Faz o container crescer até o rodapé */
+}
+
+/* Footer sempre na parte inferior */
+footer {
+margin-top: auto; /* Empurra o footer para baixo */
+}
+
+
+/* Container da história com imagem à esquerda e texto à direita */
+.conteudo-historia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+
+}
+
+.imagem-historia {
+  width: 350px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  
+}
+
+.texto-historia {
+  max-width: 1000px;
+  text-align: justify;
+  
+}
+
+/* Linha do tempo */
+.linha-do-tempo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.ano {
+  background-color: #faeb13;
+  color: black;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ano:hover {
+  background-color: #8d041e;
+}
+
+/* Ao passar o mouse em cima, mostra a história associada a cada ano */
+.ano::after {
+  content: attr(data-historia);
+  display: block;
+  opacity: 0;
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.ano:hover::after {
+  opacity: 1;
+}
+
+
+/* Botão dentro da classe etica */
+.btn-etica {
+  background-color: #b10127; /* Cor de fundo do botão */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px; /* Espaçamento à esquerda para alinhamento */
+}
+
+.btn-etica:hover {
+  background-color: #8d041e; /* Cor ao passar o mouse */
+}
+
+
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .empresa-container {
+    padding: 20px;
+    font-size: 18px; /* Diminuindo o tamanho da fonte para telas pequenas */
+  }
+
+  .info-container_tela {
+    padding: 40px 20px; /* Ajuste do espaçamento */
+    margin-top: 100px; /* Menos espaçamento entre o conteúdo */
+  }
+
+  .conteudo-historia {
+    flex-direction: column; /* Coloca a imagem e o texto em uma coluna em telas menores */
+    padding: 20px;
+  }
+
+  .imagem-historia {
+    width: 100%; /* A imagem ocupa toda a largura disponível */
+    max-width: 300px; /* Tamanho máximo para a imagem */
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+  }
+
+  .texto-historia {
+    max-width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+    text-align: justify;
+  }
+
+  .linha-do-tempo {
+    flex-direction: column; /* Alinha os itens verticalmente em telas pequenas */
+    gap: 10px;
+    margin-top: 30px; /* Ajuste do espaçamento */
+  }
+
+  .ano {
+    font-size: 16px; /* Diminuindo o tamanho da fonte */
+    padding: 8px 15px; /* Menor padding */
+  }
+
+  .btn-etica {
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    padding: 12px 0;
+    font-size: 18px; /* Ajuste no tamanho da fonte */
+    margin-top: 20px; /* Espaço maior entre o texto e o botão */
+  }
+}
+
+/* Responsividade para telas muito pequenas, como smartphones com largura de 480px ou menos */
+@media screen and (max-width: 480px) {
+  .empresa-container {
+    font-size: 16px; /* Menor tamanho de fonte */
+  }
+
+  .info-container_tela {
+    padding: 30px 15px; /* Reduzindo o padding */
+  }
+
+  .conteudo-historia {
+    padding: 15px;
+  }
+
+  .imagem-historia {
+    width: 100%;
+    max-width: 250px; /* Ajuste de tamanho para telas ainda menores */
+  }
+
+  .linha-do-tempo {
+    gap: 5px;
+  }
+
+  .ano {
+    font-size: 14px; /* Tamanho de fonte menor */
+    padding: 6px 12px;
+  }
+}

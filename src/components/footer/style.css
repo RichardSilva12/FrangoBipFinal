@@ -1,0 +1,115 @@
+.footer {
+    background-color: #b10127;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 100px;
+    margin: 0 auto; /* Centraliza a logo */
+}
+
+.conteudo {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-around; /* Distribui os blocos de forma equitativa */
+    text-align: left;
+}
+
+.conteudo > div {
+    flex: 1;
+    margin: 0 20px; /* Dá um espaçamento maior entre as seções */
+}
+
+.social-media-container {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-media-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-container li {
+    margin-left: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Ajusta o tamanho dos ícones */
+    height: auto;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 10px;
+} 
+
+
+/*   reponsivel */
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo-container {
+      display: none; /* Esconde a logo em telas menores */
+    }
+  
+    .conteudo {
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .conteudo > div {
+      margin-bottom: 20px;
+    }
+  
+    .social-media-container {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-media-container ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-media-container li {
+      margin: 10px 0;
+    }
+  
+    .copyright {
+      font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    }
+  }

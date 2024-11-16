@@ -1,0 +1,57 @@
+.depoimentos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #B16010;
+  }
+  
+  .depoimentos h2 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 2rem;
+    font-weight: 700; /* Deixe o texto em negrito */
+    text-align: center;
+    color: #000000;
+  }
+  
+  .carrossel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    margin-bottom: 30px; /* Adiciona espaço extra abaixo do carrossel */
+  }
+  
+  .card {
+    flex: 0 0 300px;
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    min-width: 300px;
+    margin-top: 20px;
+  }
+  
+  .card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .rating {
+    color: #FFD700;
+    margin: 10px 0;
+  }
+  
+  .card span {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

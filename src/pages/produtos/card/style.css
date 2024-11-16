@@ -1,0 +1,215 @@
+/* Remove qualquer margem ou padding entre os componentes principais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+/* Ajuste da página de receita */
+/* Estilo geral da página do carrinho */
+.carrinho-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 50px 100px 100px 100px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes no card-page para espaçar o conteúdo do header */
+.card-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  padding-top: 140px;
+}
+
+/* Estilo do título do carrinho */
+.carrinho-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Estilo para os itens do carrinho */
+.carrinho-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.carrinho-item-img {
+  width: 120px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.carrinho-item-info {
+  flex-grow: 1;
+  padding: 10px 100px;
+  margin-left: 20px;
+}
+
+.carrinho-item-info h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.carrinho-item-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Controles de quantidade */
+.carrinho-item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.carrinho-item-controls button {
+  background-color: #ff5757;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.carrinho-item-controls button:hover {
+  background-color: #ff4040;
+}
+
+.carrinho-item-controls span {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Botão para remover produto */
+.btn-remover {
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.btn-remover:hover {
+  background-color: #e60000;
+}
+
+/* Botão para finalizar o pedido */
+.btn-finalizar {
+  display: block;
+  width: 100%;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-finalizar:hover {
+  background-color: #218838;
+}
+
+/* Texto para o carrinho vazio */
+.carrinho-container p {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Estilo do botão de voltar */
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-voltar:hover {
+  background-color: #0056b3;
+}
+
+/* Mídia Query para telas pequenas (dispositivos móveis) */
+@media (max-width: 767px) {
+  .carrinho-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* Reduzir o tamanho do título */
+  .carrinho-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Ajustar layout dos itens do carrinho para stack (coluna) em telas pequenas */
+  .carrinho-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .carrinho-item-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .carrinho-item-info {
+    padding: 10px;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .carrinho-item-controls {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .btn-finalizar {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .btn-voltar {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .formulario-pedido input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .formulario-pedido button {
+    width: 100%;
+    padding: 15px;
+  }
+}

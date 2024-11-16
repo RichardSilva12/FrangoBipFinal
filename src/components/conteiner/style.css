@@ -1,0 +1,32 @@
+/* Container informativo abaixo das receitas */
+.info-container {
+  background-color: #b10127; /* Cor de fundo vermelha */
+  height: 90px; /* Altura fixa de 60px */
+  display: flex; /* Utiliza flexbox para alinhar os elementos */
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  color: white; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  padding: 0 20px; /* Espaçamento lateral */
+}
+
+/* Estilo para a primeira parte do texto */
+.info-title {
+  font-size: 18px; /* Tamanho da fonte */
+  margin: 0;
+  justify-content: space-around;
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as palavras */
+}
+
+/* Estilo para a parte em negrito e preto */
+.bip-alimentos {
+  font-weight: bold; /* Negrito */
+  color: black; /* Cor preta */
+}
+
+/* Estilo para a segunda parte do texto */
+.info-cot {
+  font-size: 14px; /* Tamanho da fonte */
+  margin: 0;
+}

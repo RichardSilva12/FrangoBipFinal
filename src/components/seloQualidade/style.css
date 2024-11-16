@@ -1,0 +1,55 @@
+.selo-qualidade {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .selo-qualidade h2 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 2rem;
+    font-weight: 700; /* Deixe o texto em negrito */
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+  }
+  
+  .selo-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .selo-card {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .selo-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .selo-imagem {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .selo-card h3 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  .selo-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  

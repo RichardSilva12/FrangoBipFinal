@@ -1,0 +1,48 @@
+/* Importar a fonte desejada do Google Fonts (exemplo: Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos globais */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Tamanho base da fonte */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5; /* Cor de fundo padrão */
+  color: #333; /* Cor do texto padrão */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Configuração global para links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remover estilo padrão de botões */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}

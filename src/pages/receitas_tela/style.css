@@ -1,0 +1,126 @@
+/* Remove qualquer margem ou padding entre os componentes principais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+/* Estilos globais */
+body {
+  background-color: #DC7B1A; /* Cor de fundo desejada */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  color: #333; /* Cor do texto padrão (opcional) */
+}
+
+/* Ajuste da página de receita */
+.receita-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+/* Header com espaçamento */
+.receita-container {
+  background-color: #b10127; /* Fundo vermelho */
+  color: white; /* Texto branco */
+  text-align: center;
+  padding: 20px 0; /* Espaçamento de 40px */
+  font-size: 24px; /* Texto grande */
+  font-weight: bold;
+  margin-top: 150px; /* Espaçamento abaixo do header */
+  flex-grow: 1; /* Faz o container crescer até o rodapé */
+}
+
+.info-container_tela {
+  background-color: #DC7B1A; /* Fundo vermelho */
+  text-align: center;
+  padding: 100px 0; /* Espaçamento de 40px */
+  font-weight: bold;
+  margin-top: 10px; /* Espaçamento abaixo do header */
+  flex-grow: 1; /* Faz o container crescer até o rodapé */
+} 
+
+/* Footer sempre na parte inferior */
+footer {
+  margin-top: auto; /* Empurra o footer para baixo */
+}
+
+/* Botão de carregar mais */
+.carregar-mais {
+  background-color: #b10127;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Grid de receitas com 3 itens por linha */
+.receitas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px auto; /* Margem automática para centralizar horizontalmente */
+  max-width: 1200px; /* Defina uma largura máxima para centralizar a grade */
+  padding: 0 20px; /* Espaçamento lateral para evitar que fique colado nas bordas */
+}
+
+/* Cada item de receita */
+.receita-texto {
+  background-color: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo da imagem */
+.receita-img-texto {
+  width: 100%; /* Faz a imagem ocupar toda a largura do container */
+  height: 300px;
+  object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Informações da receita */
+.receita-info h3 {
+  padding: 1px 20px;
+  font-size: 18px;
+  color: #b10127;
+}
+
+.receita-info p {
+
+  font-size: 14px;
+  color: black;
+}
+
+/* Ícone de tempo e serve */
+.icone {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+.receita-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.receita-link:hover {
+  cursor: pointer;
+}
+
+
+.receita-info button {
+  background-color: #ad9831;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 5px;
+  font-weight: bold;
+}

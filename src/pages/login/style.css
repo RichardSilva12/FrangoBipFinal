@@ -1,0 +1,98 @@
+.login-cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-wrapper {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.button-container button {
+    background-color: #a8772d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #6f2c91;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-section, .cadastro-section {
+    width: 50%;
+}
+.cadastro-section {
+    margin-left: auto;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #512da8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #6f2c91;
+}  
+
+.cadastro-section {
+    text-align: center;
+}
+
+.btn-voltar-home {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgb(255, 0, 0);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-voltar-home:hover {
+    background-color: #d1ae00;
+    color: #333;
+}

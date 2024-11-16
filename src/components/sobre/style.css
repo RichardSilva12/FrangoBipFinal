@@ -1,0 +1,77 @@
+/* importando fonte */
+.nome-sobre {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center;    /* Alinha verticalmente ao centro */
+    height: 100px;          /* Defina uma altura adequada para o container */
+    font-family: 'Roboto', sans-serif;
+
+  }
+
+.nome-sobre span {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 2.7rem;
+    font-weight: 700; /* Deixe o texto em negrito */
+    text-align: center;
+    color: #000000;
+  }
+
+/* Container informativo */
+.info {
+    background-color: #ffffff; /* Cor de fundo branca */
+    display: flex; /* Utiliza flexbox para alinhar os elementos */
+    flex-direction: column; /* Alinha itens em coluna */
+    padding: 50px 20px; /* Ajusta o espaçamento lateral e superior/inferior */
+    width: 100%; /* Faz o container ocupar 100% da largura da página */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+/* Estilo para o título */
+.nome {
+    font-size: 30px; /* Tamanho da fonte */
+    padding: 0 0 15px 0; /* Espaçamento inferior */
+    font-weight: bold;
+    text-transform: none;
+    color: black; /* Cor do texto */
+    align-self: flex-start; /* Alinha à esquerda do container */
+}
+
+/* Container para a imagem e o texto */
+.info-content {
+    display: flex; /* Utiliza flexbox para alinhar imagem e texto lado a lado */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Faz o conteúdo ocupar 100% da largura */
+}
+
+/* Imagem do lado esquerdo */
+.info-image {
+    width: 30%; /* 30% da largura do container */
+    max-width: 200px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilo para o texto */
+.info-run {
+    width: 70%; /* 70% da largura do container */
+    font-size: 18px; /* Tamanho da fonte */
+    margin: 100px; /* Remove margens */
+    text-align: justify; /* Justifica o texto */
+}
+  
+/* Estilo do botão */
+.btn-veja-mais {
+    background-color: #b10127;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Ajusta o padding do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Espaçamento acima do botão */
+}
+
+.btn-veja-mais:hover {
+    background-color: #8a021e;
+}

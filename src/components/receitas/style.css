@@ -1,0 +1,111 @@
+/* import fonte*/
+.nome-receita {
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  align-items: center;    /* Alinha verticalmente ao centro */
+  height: 100px;          /* Defina uma altura adequada para o container */
+}
+
+.nome-receita span {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+
+
+/* Container geral de receitas com fundo amarelado */ 
+.receitas-container {
+  padding: 30px 10px 40px;
+  background-color: #B16010; /* Amarelo claro */
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  width: 100%; /* O container ocupa 100% da largura */
+}
+
+/* Estilo do título "Receitas" para cobrir uma linha inteira */
+.nome {
+  font-size: 32px; /* Aumenta o tamanho da fonte do título */
+  font-weight: bold;
+  color: white;
+  width: 100%; /* Faz com que o título ocupe a largura total */
+  text-align: center; /* Centraliza o texto */
+  padding: 20px 0; /* Espaçamento interno */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Container para organizar os itens de receita */
+.receitas-items-container {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens de receita na tela */
+  flex-wrap: wrap; /* Permite que os itens quebrem de linha em telas menores */
+  width: 100%; /* O container de itens de receita ocupa 100% da largura */
+}
+
+/* Cada item de receita */
+.receita-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex; /* Alinha imagem e descrição */
+  background-color: #b10127;
+}
+
+/* Efeito de zoom ao passar o mouse sobre o item */
+.receita-item:hover {
+  transform: scale(1.05);
+}
+
+/* Imagem da receita */
+.receita-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Texto sobreposto na imagem (overlay) */
+.receita-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Exibe o overlay ao passar o mouse */
+.receita-item:hover .receita-overlay {
+  opacity: 1;
+}
+
+/* Estilo da descrição */
+.receita-description {
+  display: none; /* Esconde a descrição por padrão */
+  margin-left: 10px; /* Espaço entre a imagem e a descrição */
+  align-self: center; /* Alinha a descrição verticalmente */
+  color: white; /* Cor do texto da descrição */
+  font-size: 18px; /* Tamanho da fonte da descrição */
+}
+
+/* Exibe a descrição ao passar o mouse sobre o item */
+.receita-item:hover .receita-description {
+  display: block; /* Exibe a descrição ao passar o mouse */
+}

@@ -17,7 +17,7 @@ const Receitas = () => {
   return (
     <div className="receitas-container">
       <div className="nome-receita">
-        <span>Receitas</span>
+        <h1>Receitas</h1>
       </div>
       <br />
       <div className="receitas-items-container">

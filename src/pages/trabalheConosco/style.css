@@ -22,6 +22,10 @@
   font-weight: bold;
   margin-top: 150px;
   flex-grow: 1;
+  h1{
+    color: white;
+    font-size: 30px;
+  }
 }
 
 .info-container_tela {

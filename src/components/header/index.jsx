@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importe o Link do React Router
+import { Link } from 'react-router-dom';
 import facebookIcon from '../../../src/assets/img/facebook.png';
 import instagramIcon from '../../../src/assets/img/instagram.png';
 import linkedinIcon from '../../../src/assets/img/linkedin.png';
@@ -7,10 +7,10 @@ import logo from '../../assets/img/logo-bip.png';
 import './style.css';
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Alterna o estado do menu
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -44,7 +44,6 @@ function Header() {
         <img src={linkedinIcon} alt="Linkedin" className="social-icon" />
       </div>
 
-      {/* Botão de Menu para telas pequenas */}
       <div className="menu-toggle" onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>

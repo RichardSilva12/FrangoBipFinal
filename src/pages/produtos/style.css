@@ -8,6 +8,10 @@
   font-weight: bold;
   margin-top: 150px; /* Espaçamento abaixo do header */
   flex-grow: 1; /* Faz o container crescer até o rodapé */
+  h1{
+    font-size: 30px;
+    color: white;
+  }
 }
 
 .info-container_produto {

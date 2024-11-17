@@ -3,9 +3,9 @@ import Slider from 'react-slick'; // Importa o carrossel
 import './style.css'; // Estilos do carrossel
 
 // Importando imagens corretamente
-import image1 from '../../assets/img/carrosel_teste.jpg';
-import image2 from '../../assets/img/fundo_teste2.png';
-import image3 from '../../assets/img/fundo_teste3.png';
+import image1 from '../../assets/img/carrosel1.jpg';
+import image2 from '../../assets/img/carrosel2.png';
+import image3 from '../../assets/img/carrosel3.png';
 
 const Carousel = () => {
   const sliderRef = useRef(null); // Referência para o slider

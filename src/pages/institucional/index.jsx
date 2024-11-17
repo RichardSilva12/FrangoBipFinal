@@ -4,6 +4,7 @@ import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';
 import './style.css';
 
+import etica from '../../assets/etica.pdf'
 
 function Institucional() {
   return (
@@ -38,7 +39,9 @@ function Institucional() {
           <p>O Código de Ética e Conduta do FrigoBip estabelece diretrizes claras para as atividades organizacionais e colaborativas da empresa. Seu objetivo é comunicar de forma transparente as expectativas de comportamento e as normas adotadas, abordando temas essenciais para o clima organizacional e a valorização do nosso maior ativo: os colaboradores. Ao tornar essas diretrizes públicas, reforçamos nosso compromisso com um ambiente de trabalho ético e respeitoso.</p>
    
         
-          <a href="/assets/etica.pdf" download>
+          
+
+          <a href={etica} download="etica">
            <button className="btn-etica">AQUI</button>
           </a>
 

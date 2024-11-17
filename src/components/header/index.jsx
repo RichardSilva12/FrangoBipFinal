@@ -39,10 +39,16 @@ function Header() {
       </div>
 
       <div className="logos">
-        <img src={instagramIcon} alt="Instagram" className="social-icon" />
-        <img src={facebookIcon} alt="Facebook" className="social-icon" />
-        <img src={linkedinIcon} alt="Linkedin" className="social-icon" />
-      </div>
+        <a href="https://www.instagram.com/frangobip/" target="_blank" rel="noopener noreferrer">
+          <img src={instagramIcon} alt="Instagram" className="social-icon" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100054291019524" target="_blank" rel="noopener noreferrer">
+          <img src={facebookIcon} alt="Facebook" className="social-icon" />
+        </a>
+        <a href="https://www.linkedin.com/company/frangobip" target="_blank" rel="noopener noreferrer">
+          <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
+        </a>
+</div>
 
       <div className="menu-toggle" onClick={toggleMenu}>
         <span className="bar"></span>

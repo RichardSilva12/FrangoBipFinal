@@ -1,28 +1,80 @@
 /* Remove qualquer margem ou padding entre os componentes principais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-  }
-  
- /* Estilos globais */
-body {
-    background-color: #DC7B1A; /* Cor de fundo desejada */
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    color: #333; /* Cor do texto padrão (opcional) */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Use border-box para facilitar cálculos de largura e altura */
 }
 
-/* Outros estilos globais podem ser adicionados aqui */
+/* Estilos globais */
+body {
+  background-color: #DC7B1A;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
 /* Container informativo abaixo das receitas */
 .info-container2 {
-    background-color: #DC7B1A; /* Cor de fundo vermelha */
-    height: 60px; /* Altura fixa de 60px */
-    display: flex; /* Utiliza flexbox para alinhar os elementos */
-    flex-direction: column; /* Alinha os itens em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 0 20px; /* Espaçamento lateral */
+  background-color: #DC7B1A;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .info-container2 {
+      height: 50px; /* Reduz a altura para telas menores */
+      padding: 0 15px;
   }
+
+  /* Ajustar componentes principais */
+  header, main, footer {
+      padding: 10px; /* Reduz o espaçamento interno */
+  }
+
+  /* Ajustar o carrossel */
+  .carousel {
+      height: auto; /* Permite que o carrossel se ajuste ao tamanho da tela */
+      width: 100%; /* Garante que ocupe toda a largura */
+  }
+
+  /* Ajustar textos e fontes */
+  body {
+      font-size: 14px; /* Reduz a fonte geral */
+  }
+
+  .info-container2 {
+      font-size: 12px; /* Ajusta o tamanho do texto no container */
+  }
+}
+
+@media (max-width: 480px) {
+  .info-container2 {
+      height: 40px; /* Ainda menor para telas pequenas */
+      font-size: 10px; /* Reduz mais o texto */
+  }
+
+  /* Ajustes específicos para celulares */
+  header, main, footer {
+      padding: 5px; /* Espaçamento mínimo */
+  }
+
+  .carousel img {
+      width: 100%; /* Garante que imagens no carrossel sejam responsivas */
+      height: auto; /* Mantém proporção */
+  }
+
+  /* Ajustar produtos e outros componentes */
+  .produtos {
+      display: grid;
+      grid-template-columns: 1fr; /* Um único produto por linha */
+      gap: 10px; /* Espaçamento entre itens */
+  }
+}

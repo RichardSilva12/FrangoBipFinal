@@ -100,7 +100,7 @@ function Receita() {
             </div>
           ))}
         </div>
-        <button className="carregar-mais">Carregar mais</button>
+       { /* <button className="carregar-mais">Carregar mais</button> */ }
       </div>
       <Footer />
     </div>

@@ -68,8 +68,8 @@ function LoginCadastro() {
         <h1>{isLogin ? 'Entrar' : 'Cadastrar'}</h1>
         
         <div className="button-container">
-          <button onClick={() => setIsLogin(true)}>Login</button>
-          <button onClick={() => setIsLogin(false)}>Cadastrar</button>
+          <button onClick={() => { setIsLogin(true); setErrorMessage(''); }}>Login</button>
+          <button onClick={() => { setIsLogin(false); setErrorMessage(''); }}>Cadastrar</button>
         </div>
 
         <div className="form-container">

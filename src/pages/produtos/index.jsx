@@ -5,6 +5,8 @@ import Footer from '../../components/footer/index';
 import Header from '../../components/header/index';
 import './style.css';
 
+import catalogo from '../../assets/catalogo.pdf'
+
 /* import image product */
 import produto1Img from '../../assets/img_produtos/produto1.png';
 import produto10Img from '../../assets/img_produtos/produto10.png';
@@ -93,7 +95,7 @@ function Produtos() {
               <img src={produto.imagem} alt={produto.nome} className="produto-img-texto" />
               <div className="produto-info">
                 <h3>{produto.nome}</h3>
-                <a href="/assets/produtosfrangos.pdf" download="produtosfrangos.pdf" className="receita-link">
+                <a href={catalogo} download="catalogo" className="receita-link">
                   <button className='btn-leia-mais'>Leia mais</button>
                 </a>
                 <button className="btn-comprar" onClick={() => comprarProduto(produto)}>COMPRAR</button>
@@ -101,7 +103,7 @@ function Produtos() {
             </div>
           ))}
         </div>
-        <button className="carregar-mais-produto">Carregar mais</button>
+       {/* <button className="carregar-mais-produto">Carregar mais</button> */}
       </div>
       <Footer />
     </div>

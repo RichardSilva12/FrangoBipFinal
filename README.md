@@ -29,7 +29,7 @@ Abra o terminal e execute:
 
 bash
 Copiar código
-git clone **https://github.com/RichardSilva12/projeto-frigobip**
+git clone **https://github.com/TiagoCarmelino/FrangoBipFinal.git**
 cd projeto-frigobip
 2. Configurar o Banco de Dados MySQL
 Abra o MySQL Workbench e crie um banco de dados:

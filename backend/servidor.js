@@ -12,11 +12,11 @@ app.use(express.json());
 // Configuração do Nodemailer
 const transport = nodemailer.createTransport({
   host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
+  port: 587,
+  secure: false,
   auth: {
     user: 'richard.a.peghin@gmail.com',
-    pass: 'emndtwiuokekwwkq',
+    pass: 'fpch ovep vdym erum',
   }
 });
 
